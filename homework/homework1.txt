@@ -1,0 +1,121 @@
+Первое ДЗ 
+до 04.10.2021
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я- pwd
+2) Создать папку - mkdir grup_23
+3) Зайти в папку - cd grup_23
+4) Создать 3 папки mkdir test_{1..3}
+5) Зайти в любоую папку- cd test_1
+6) Создать 5 файлов - (3 txt, 2 json) - touch one{1..3}.txt sos{1,2}.json   ----------- получается расширение тхт_1 и так далее. должне же быть тхт
+7) Создать 3 папки - mkdir kontrust_{1..3} 
+8. Вывести список содержимого папки -  ls -la
+9) + Открыть любой txt файл - nano one1.txt
+10) + написать туда что-нибудь, любой текст. через nano не нужны дополниетльные команды для того чтобы начать писать текст.
+
+
+
+11) + сохранить и выйти. - 1.Ctrl+x
+                           2.Y 
+                           3.Enter
+12) Выйти из папки на уровень выше cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv one1.txt kontrust_3/one1.txt
+                                                                           mv one2.txt kontrust_3/one2.txt
+
+                                                                           
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp sos1.json kontrust_1/sos1.json 
+                                                                           cp sos2.json kontrust_1/sos2.json 
+
+15) Найти файл по имени -  find -name one3.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.- cat one1.txt  ------tail попробуй cat не покажет в реальном времени tail -f one1.txt
+ С помощью команды grep можно осуществлять поиск по содержимому файла. 
+ Можно найти слово "test" в тексте. -grep "test" one1.txt либо без учета регистра во время поиска.  grep -i "test" one1.txt
+
+
+
+17) вывести несколько первых строк из текстового файла - head -n 3 one1.txt
+
+18) вывести несколько последних строк из текстового файла - tail -n 3 one1.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. 
+- less one1.txt;
+ выход из less нажать «q» в любой точке; 
+ g переместить в начало файла; 
+Shift + g переместить в конец файла.
+
+20) вывести дату и время - date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request 
+
+1 запрос: curl http://162.55.220.72:5005/terminal-hw-request 
+в ответ пришло:
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   237  100   237    0     0    990      0 --:--:-- --:--:-- --:--:--   995{"Intro":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)","result":["Your_String","Your_number"]}}
+
+ 2 запрос:  curl 'http://162.55.220.72:5005/get_method?name=Daria&age=28'
+в ответ пришло:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    15  100    15    0     0     59      0 --:--:-- --:--:-- --:--:--    60["Daria","28"]
+
+
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+echo "Hello grup_23"
+cd grup_23
+cd test_2
+mkdir dir{1..3}
+cd dir1
+touch list{1..3}.txt linux{1,2}.json
+mkdir grup{1..3}
+ls -la
+mv list1.txt grup3/list1.txt
+mv list2.txt grup3/list2.txt
+ls -la
+
+
+
+
+
+$ bash myscript1.sh
+Hello grup_23
+total 8
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 .
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 ..
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 grup1
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 grup2
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 grup3
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 linux1.json
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 linux2.json
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 list1.txt
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 list2.txt
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 list3.txt
+total 8
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 .
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 ..
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 grup1
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 grup2
+drwxr-xr-x 1 Hornet 197121 0 Oct  3 22:08 grup3
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 linux1.json
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 linux2.json
+-rw-r--r-- 1 Hornet 197121 0 Oct  3 22:08 list3.txt
+
+
+
+
+
+
+=====================
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir foldername
+3) Зайти в папку - cd foldername
