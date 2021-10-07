@@ -118,6 +118,15 @@
  2. нажать на значок карандаша (edit this file)
  3. Написать информацию о своих предпочтениях.
 
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<Favorite_movie>Pride_and_Prejudice</Favorite_movie>
+<Favorite_series>Queen's_move</Favorite_series>
+<Favorite_food>Soup</Favorite_food>
+<Side_you_would_like_to_visit>Italy</Side_you_would_like_to_visit>
+</root>
+
+
  29. Сделать Commit changes (сохранить) изменения на веб интерфейсе. - Нажать на кнопку "Commit new file"
  30. Синхронизировать внешний и локальный репозитории - git pull
 
