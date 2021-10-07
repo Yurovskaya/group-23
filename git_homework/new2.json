@@ -2,4 +2,9 @@
    "age" :28,
    "number of pets" :2,
    "desired Salary" :"80000 rub"}                                                                                                                                                   
-                                     
+                                    
+{ "Favorite movie":"Pride and Prejudice",
+  "Favorite series":"Queen's move",
+  "Favorite food":"Soup",
+  "Side you would like to visit":"Italy "}
+
