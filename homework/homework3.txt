@@ -1,0 +1,55 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman - git branch Postman
+- Jmeter - git branch Jmeter
+- CheckLists - git branch CheckLists
+- Bag Reports - git branch Bag_Reports
+- SQL - git branch SQL
+- Charles - git branch Charles
+- Mobile testing - git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий - git push origin --all
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта 
+
+1. git checkout Bag_Reports
+2. nano structure_bug_report.txt
+3. Ctrl+X
+4. Y
+5. Enter
+
+4. Запушить структуру багрепорта на внешний репозиторий
+1. git status
+2. git add .
+3. git commit -m "add structure_bug_report"
+4. git push --set-upstream origin Bag_Reports 
+
+5. Вмержить ветку Bag Reports в Main 
+1. git checkout main
+2. git merge Bag_Reports
+
+
+6. Запушить main на внешний репозиторий. git push
+
+7. В ветке CheckLists набросать структуру чек листа. 
+1. git checkout CheckLists
+2. nano checklist_structure.txt
+3. Ctrl+X
+4. Y
+5. Enter
+
+8. Запушить структуру на внешний репозиторий
+1. git status
+2. git add .
+3. git commit -m "add checklist_structure"
+4. git push --all
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+1."Pull Request" 
+2. "Compare and Pull request" 
+3."Merge pull request" 
+4. "Confirm merge"
+
+10. Синхронизировать Внешнюю и Локальную ветки Main 
+1. git checkout main
+2. git pull
